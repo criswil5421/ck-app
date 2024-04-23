@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/ck-app/build/static/css/main.e6c13ad2.css",
+    "main.js": "/ck-app/build/static/js/main.db6b7e0d.js",
+    "static/media/imagen3.jpg": "/ck-app/build/static/media/imagen3.370f1731532aad348c7e.jpg",
+    "static/media/imagen8.jpg": "/ck-app/build/static/media/imagen8.ef9f1fe4ccfbafd1168a.jpg",
+    "static/media/imagen6.jpg": "/ck-app/build/static/media/imagen6.25456730adfaf8c45fee.jpg",
+    "static/media/imagen7.jpg": "/ck-app/build/static/media/imagen7.e8186b42799afd36910a.jpg",
+    "static/media/imagen5.jpg": "/ck-app/build/static/media/imagen5.11993ac83030a7849b2e.jpg",
+    "static/media/imagen9.jpg": "/ck-app/build/static/media/imagen9.c118602d8c175113afe0.jpg",
+    "static/media/imagen4.jpg": "/ck-app/build/static/media/imagen4.ec56d31144fcdd4d84e4.jpg",
+    "static/media/imagen2.jpg": "/ck-app/build/static/media/imagen2.ded7b6d0bbbfd8144d0f.jpg",
+    "static/media/imagen1.jpg": "/ck-app/build/static/media/imagen1.95d76ca8402446594632.jpg",
+    "index.html": "/ck-app/build/index.html",
+    "main.e6c13ad2.css.map": "/ck-app/build/static/css/main.e6c13ad2.css.map",
+    "main.db6b7e0d.js.map": "/ck-app/build/static/js/main.db6b7e0d.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e6c13ad2.css",
+    "static/js/main.db6b7e0d.js"
+  ]
+}
