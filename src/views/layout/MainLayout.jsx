@@ -12,7 +12,7 @@ const MainContent = () => (
 );
 
 const MainLayout = () => (
-	<Router basename="/ck-app/build">
+	<Router basename="/ck-app">
 		<Box >
 			{/* <Header /> */}
 			<MainContent />
