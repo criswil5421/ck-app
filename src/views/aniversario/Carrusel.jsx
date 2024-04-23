@@ -15,6 +15,7 @@ import imagen6 from './img/imagen6.jpg'
 import imagen7 from './img/imagen7.jpg'
 import imagen8 from './img/imagen8.jpg'
 import imagen9 from './img/imagen9.jpg'
+import { useMediaQuery, useTheme } from '@mui/material';
 
 const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
 
@@ -61,6 +62,9 @@ const Carrusel = () => {
   const [activeStep, setActiveStep] = React.useState(0);
   const maxSteps = images.length;
 
+  const theme = useTheme();
+  const isSmallScreen = useMediaQuery(theme.breakpoints.down('sm'));
+
   const handleNext = () => {
     setActiveStep((prevActiveStep) => prevActiveStep + 1);
   };
@@ -74,7 +78,7 @@ const Carrusel = () => {
   };
 
   return (
-    <Box sx={{ maxWidth: 600 }} >
+    <Box sx={{ maxWidth: '100%', overflow: 'hidden' }} >
       <AutoPlaySwipeableViews
         index={activeStep}
         onChangeIndex={handleStepChange}
@@ -86,15 +90,16 @@ const Carrusel = () => {
                 key={step.label}
                 component="img"
                 sx={{
-                  height: 550,
-                  maxWidth: 600,
+                  maxHeight: 550,
+                  maxWidth: '80%',
                   objectFit: 'cover',
                   display: 'flex',
                   alignItems: 'center',
-                  margin: 'auto'
+                  margin: 'auto',
+                  padding: 'auto'
                 }}
                 src={step.imgPath}
-                alt={step.label}
+                alt={`imagen${index + 1}`}
               />
             ) : null
         ))}
@@ -105,20 +110,22 @@ const Carrusel = () => {
         activeStep={activeStep}
         nextButton={
           <Button
-            size="small"
+            size={isSmallScreen ? "extraSmall" : "small"}
             onClick={handleNext}
             disabled={activeStep === maxSteps - 1}
+            sx={{ fontSize: isSmallScreen ? "0.5rem" : "inherit" }}
           >
             Adelante
               <KeyboardArrowRight />
           </Button>
         }
         backButton={
-          <Button size="small" onClick={handleBack} disabled={activeStep === 0}>
+          <Button size={isSmallScreen ? "extraSmall" : "small"} onClick={handleBack} disabled={activeStep === 0} sx={{ fontSize: isSmallScreen ? "0.5rem" : "inherit" }}>
               <KeyboardArrowLeft />
             Atras
           </Button>
         }
+        sx={{ display: isSmallScreen ? "none" : "flex" }}
       />
     </Box>
   );

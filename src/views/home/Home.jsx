@@ -53,61 +53,61 @@ const chicasSuperpoderosasFondo = {
   backgroundColor: 'pink',
   backgroundImage: `radial-gradient(circle at 20% 30%, #ffff33 5%, transparent 5%), radial-gradient(circle at 75% 50%, #ffff33 5%, transparent 5%), radial-gradient(circle at 46% 60%, #ffff33 5%, transparent 5%)`,
   backgroundSize: '120px 120px',
-  backgroundRepeat: 'no-repeat',
+  backgroundRepeat: 'no-repeat'
 };
     return (
-      <Grid container sx={chicasSuperpoderosasFondo} p={4}>
+      <Grid container sx={chicasSuperpoderosasFondo} p={4} display={"flex"}>
         { aniversario && (
           <Grid item xs={12}>
-            <Typography variant="h2" textAlign={"center"} sx={neonTextStyles}>
+            <Typography variant="h2" textAlign={"center"} sx={{ ...neonTextStyles, fontSize: { xs: '2rem', sm: '3rem' } }}>
                 Feliz Aniversario Mi Amor
             </Typography>
           </Grid>)
         }  
-        <Grid item xs={4} alignItems={"center"} display={"flex"} justifyContent={"center"}>
-            <Typography variant="h2" textAlign={"center"} sx={neonTextStyles}>
+        <Grid item xs={4} sm={4} alignItems={"center"} display={"flex"} justifyContent={"center"}>
+            <Typography variant="h2" textAlign={"center"} sx={{ ...neonTextStyles, fontSize: { xs: '2rem', sm: '3rem' } }}>
                 Tee
             </Typography>
         </Grid>
-        <Grid item xs={4} alignItems={"center"} display={"flex"} justifyContent={"center"}>
+        <Grid item xs={4} sm={4} alignItems={"center"} display={"flex"} justifyContent={"center"}>
           <Carrusel />
         </Grid>
-        <Grid item xs={4} alignItems={"center"} display={"flex"} justifyContent={"center"}>
-            <Typography variant="h2" textAlign={"center"} sx={neonTextStyles}>
+        <Grid item xs={4} sm={4} alignItems={"center"} display={"flex"} justifyContent={"center"}>
+            <Typography variant="h2" textAlign={"center"} sx={{ ...neonTextStyles, fontSize: { xs: '2rem', sm: '3rem' } }}>
                 Amooo
             </Typography>
         </Grid>
 
         <Grid item xs={12}>
-          <Typography variant="h2" textAlign={"center"} sx={neonTextStyles}>
+          <Typography variant="h2" textAlign={"center"} sx={{ ...neonTextStyles, fontSize: { xs: '2rem', sm: '3rem' } }}>
               {tiempoTranscurrido}
           </Typography>
         </Grid>
-        <Grid item xs={12} display={"flex"} justifyContent={"center"}>
-          <iframe 
-            width="560" 
-            height="315" 
-            src="https://www.youtube.com/embed/CGQ6LkSKcKc?autoplay=1&loop=1&" 
-            title='CGQ6LkSKcKc'
-          />
-          <iframe 
-            width="560" 
-            height="315" 
-            src="https://www.youtube.com/embed/aBXoU73_WdU?autoplay=1&loop=1&" 
-            title='aBXoU73_WdU'
-          />
-          <iframe 
-            width="560" 
-            height="315" 
-            src="https://www.youtube.com/embed/dXXjsEduU0g?autoplay=1&loop=1&"
-            title='dXXjsEduU0g' 
-          />
-          <iframe 
-            width="560" 
-            height="315" 
-            src="https://www.youtube.com/embed/0a8XH1i_RNg?autoplay=1&loop=1&" 
-            title='0a8XH1i_RNgv'
-          />
+        <Grid item xs={12} display={"flex"} justifyContent={"center"} height={"27.2vh"}>
+            <iframe 
+              width="25%" 
+              height="100%" 
+              src="https://www.youtube.com/embed/CGQ6LkSKcKc?autoplay=1&loop=1&" 
+              title='CGQ6LkSKcKc'
+            />
+            <iframe 
+              width="25%" 
+              height="100%" 
+              src="https://www.youtube.com/embed/aBXoU73_WdU?autoplay=1&loop=1&" 
+              title='aBXoU73_WdU'
+            />
+            <iframe 
+              width="25%" 
+              height="100%" 
+              src="https://www.youtube.com/embed/dXXjsEduU0g?autoplay=1&loop=1&"
+              title='dXXjsEduU0g' 
+            />
+            <iframe 
+              width="25%" 
+              height="100%" 
+              src="https://www.youtube.com/embed/0a8XH1i_RNg?autoplay=1&loop=1&" 
+              title='0a8XH1i_RNgv'
+            />
         </Grid>
       </Grid>
     );

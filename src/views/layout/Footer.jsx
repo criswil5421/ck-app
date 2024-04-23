@@ -20,22 +20,22 @@ const Footer=() => {
 					<Grid item xs={12} md={9}> 
 						{contentFooter.map((data)=>(
 							<Box key={data.title} >
-								<Typography variant="h5" color="primary" >
+								<Typography variant="h5" color="primary"  sx={{ fontSize: { xs: "0.8rem", md: "1.48rem" } }}>
 								{data.title}
 								</Typography>
-								<Typography variant="p" color="white" >
+								<Typography variant="p" color="white" sx={{ fontSize: { xs: "0.5rem", md: "1rem" } }}>
 									{data.content}
 								</Typography>
 							</Box>
 						))}
 						
 					</Grid>
-					<Grid item xs={12} md={3} sx={{display: "flex", alignItems:"center"}}> 
+					<Grid item xs={12} md={3} sx={{display: "flex", alignItems:"center",  justifyContent: { xs: "center", md: "flex-end" }}}> 
 						{/* <Logo src="/logo letras blancas.png" /> */}
-                        <Typography variant="h2" color="white" >
+                        <Typography variant="h2" color="white" sx={{ fontSize: { xs: "3rem", md: "4rem" } }} >
 									CK
 						</Typography>
-                        <Typography variant="h7" color="white" >
+                        <Typography variant="h7" color="white" sx={{ fontSize: { xs: "1rem", md: "1rem" } }} >
 									v1
 						</Typography>
 					</Grid>
