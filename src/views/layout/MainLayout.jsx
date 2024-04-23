@@ -5,14 +5,14 @@ import { Home } from "../home";
 const MainContent = () => (
 	<Stack spacing={2} >
 			<Routes>
-				<Route path="/ck-app/build" element={<Home />} />
+				<Route path="/" element={<Home />} />
 			</Routes>
 		
 	</Stack>
 );
 
 const MainLayout = () => (
-	<Router>
+	<Router basename="/ck-app/build">
 		<Box >
 			{/* <Header /> */}
 			<MainContent />
