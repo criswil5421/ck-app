@@ -5,9 +5,10 @@ import Carrusel from '../aniversario/Carrusel';
 
 const Home = () => {
     const [tiempoTranscurrido, setTiempoTranscurrido] = useState('');
+    const [aniversario, setAniversario] = useState(false);
 
     useEffect(() => {
-        const fechaEspecifica = parse('23-02-2024', 'dd-MM-yyyy', new Date());
+      const fechaEspecifica = parse('23-02-2024', 'dd-MM-yyyy', new Date());
         const intervalId = setInterval(() => {
             const ahora = new Date();
             let meses = differenceInCalendarMonths(ahora, fechaEspecifica);
@@ -16,9 +17,13 @@ const Home = () => {
             const fecha23Anterior = sub(parse(`${format(ahora, 'MM')}-${fechaEspecifica.getDate()}-${format(ahora, 'yyyy')}`, 'MM-dd-yyyy', new Date()), { months: 1 });
             if (ahora.getDate() >=fechaEspecifica.getDate()) {   
                 diasTranscurridos = differenceInDays(ahora, fecha23);
+                if(ahora.getDate().toString() === fechaEspecifica.getDate().toString()){
+                  setAniversario(true);
+                }
             }else{
               meses--;
                 diasTranscurridos = differenceInDays(ahora, fecha23Anterior);
+                setAniversario(false);
             }
             const horas = ahora.getHours();
             const minutos = ahora.getMinutes();
@@ -45,8 +50,6 @@ const Home = () => {
   };
 
 const chicasSuperpoderosasFondo = {
-  height: "100vh",
-  width: "100vw",
   backgroundColor: 'pink',
   backgroundImage: `radial-gradient(circle at 20% 30%, #ffff33 5%, transparent 5%), radial-gradient(circle at 75% 50%, #ffff33 5%, transparent 5%), radial-gradient(circle at 46% 60%, #ffff33 5%, transparent 5%)`,
   backgroundSize: '120px 120px',
@@ -54,14 +57,27 @@ const chicasSuperpoderosasFondo = {
 };
     return (
       <Grid container sx={chicasSuperpoderosasFondo} p={4}>
-        <Grid item xs={12}>
-          <Typography variant="h2" textAlign={"center"} sx={neonTextStyles}>
-              Feliz Aniversario Mi Amor
-          </Typography>
+        { aniversario && (
+          <Grid item xs={12}>
+            <Typography variant="h2" textAlign={"center"} sx={neonTextStyles}>
+                Feliz Aniversario Mi Amor
+            </Typography>
+          </Grid>)
+        }  
+        <Grid item xs={4} alignItems={"center"} display={"flex"} justifyContent={"center"}>
+            <Typography variant="h2" textAlign={"center"} sx={neonTextStyles}>
+                Tee
+            </Typography>
         </Grid>
-        <Grid item xs={12} alignItems={"center"} display={"flex"} justifyContent={"center"}>
+        <Grid item xs={4} alignItems={"center"} display={"flex"} justifyContent={"center"}>
           <Carrusel />
         </Grid>
+        <Grid item xs={4} alignItems={"center"} display={"flex"} justifyContent={"center"}>
+            <Typography variant="h2" textAlign={"center"} sx={neonTextStyles}>
+                Amooo
+            </Typography>
+        </Grid>
+
         <Grid item xs={12}>
           <Typography variant="h2" textAlign={"center"} sx={neonTextStyles}>
               {tiempoTranscurrido}

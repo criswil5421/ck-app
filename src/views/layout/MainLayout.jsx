@@ -1,6 +1,7 @@
 import {BrowserRouter as Router,Routes,Route} from "react-router-dom";
 import {Box,Stack} from "@mui/material";
 import { Home } from "../home";
+import Footer from "./Footer";
 
 const MainContent = () => (
 	<Stack spacing={2} >
@@ -16,7 +17,7 @@ const MainLayout = () => (
 		<Box >
 			{/* <Header /> */}
 			<MainContent />
-			{/* <Footer /> */}
+			<Footer />
 		</Box>
 	</Router>
 );
