@@ -1,11 +1,11 @@
 import {BrowserRouter as Router,Routes,Route} from "react-router-dom";
-import {Box,Container,Stack} from "@mui/material";
+import {Box,Stack} from "@mui/material";
 import { Home } from "../home";
 
 const MainContent = () => (
 	<Stack spacing={2} >
 			<Routes>
-				<Route path="/" element={<Home />} />
+				<Route path="/ck-app/build" element={<Home />} />
 			</Routes>
 		
 	</Stack>

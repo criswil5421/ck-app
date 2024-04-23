@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { differenceInCalendarMonths, differenceInDays, differenceInHours, differenceInMinutes, differenceInSeconds, parse, format, sub } from 'date-fns';
-import { Grid, Stack, Typography } from '@mui/material';
+import { differenceInCalendarMonths, differenceInDays, parse, format, sub } from 'date-fns';
+import { Grid, Typography } from '@mui/material';
 import Carrusel from '../aniversario/Carrusel';
 
 const Home = () => {
@@ -72,21 +72,25 @@ const chicasSuperpoderosasFondo = {
             width="560" 
             height="315" 
             src="https://www.youtube.com/embed/CGQ6LkSKcKc?autoplay=1&loop=1&" 
+            title='CGQ6LkSKcKc'
           />
           <iframe 
             width="560" 
             height="315" 
             src="https://www.youtube.com/embed/aBXoU73_WdU?autoplay=1&loop=1&" 
+            title='aBXoU73_WdU'
           />
           <iframe 
             width="560" 
             height="315" 
-            src="https://www.youtube.com/embed/dXXjsEduU0g?autoplay=1&loop=1&" 
+            src="https://www.youtube.com/embed/dXXjsEduU0g?autoplay=1&loop=1&"
+            title='dXXjsEduU0g' 
           />
           <iframe 
             width="560" 
             height="315" 
             src="https://www.youtube.com/embed/0a8XH1i_RNg?autoplay=1&loop=1&" 
+            title='0a8XH1i_RNgv'
           />
         </Grid>
       </Grid>
